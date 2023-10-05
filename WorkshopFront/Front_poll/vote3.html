@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="./style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <title>Vote 3</title>
+</head>
+
+<body class="d-flex justify-content-center align-items-center vh-80">
+
+    <div class="col-12 col-md-4">
+        <div class="card">
+            <img src="https://picsum.photos/200" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h3 class="card-title text-center text-danger text-decoration-underline">Titre référendum</h3>
+                <p class="card-text text-center">Texte explicatif du vote </p>
+                <p class="text-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error fugit, tempore
+                    voluptatum cum facere assumenda eius sapiente.</p>
+                <div id="vote">
+                    <div>
+                        <input type="radio" id="oui" value="oui" name="vote" />
+                        <label for="oui">Oui</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="non" value="non" name="vote" />
+                        <label for="non">Non</label>
+                    </div>
+                </div>
+                <div class="btn">
+                    <button id="envoyer" class="btn btn-primary mt-1">Votez</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+
+        $('#envoyer').on('click', function () {
+
+            var selectedValue = $('input[name=vote]:checked', '#vote').val();
+
+            // Vérifier si une option est sélectionnée
+            if (!selectedValue) {
+                alert("Veuillez choisir une option de vote avant de continuer.");
+                return; // Stoppe la fonction ici
+            }
+
+            var confirmation = confirm("Êtes-vous sûr de votre vote ? " + selectedValue);
+
+            if (confirmation) {
+                alert("Votre vote a bien été pris en compte !");
+                window.location.href = "PageResult.html";
+            } else {
+                alert("Vote annulé.");
+            }
+        });
+
+    </script>
+
+</body>
+
+</html>

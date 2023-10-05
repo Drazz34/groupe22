@@ -1,0 +1,92 @@
+body {
+    background-color: rgb(234, 236, 239);
+}
+
+.btn-a {
+    text-decoration: none;
+    color: #FFF;
+}
+
+.btn-a:hover {
+    color: #FFF;
+}
+
+.links{
+    display: flex;
+    justify-content: flex-end;
+}
+.bigForm{
+    justify-content: center;
+    display: flex;
+    margin-top: 2%;
+}
+.bigFormCreation{
+    justify-content: center;
+    display: flex;
+    margin-top: 5%;
+}
+form {
+    padding: 1%;
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    flex-direction: column;
+    height: fit-content;
+    border: 1px solid rgb(225 225 225);
+    border-radius: 3%;
+    background-color: white;
+}
+
+.card{
+    margin: 20px;
+    box-shadow: 2px 2px 8px #333;
+}
+
+.card .card-img-top {
+    padding: 5px;
+    border-radius: 10px;
+}
+
+.btn{
+    display: flex; 
+    justify-content: center;
+}
+
+
+#vote{
+    margin-top: 5%;
+    display: flex;
+    justify-content: space-around;
+    margin: auto;
+    
+}
+
+.votefield{
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+}
+
+/* PageResult */
+
+h1 {
+    color: #333;
+    font-size: 20px;
+}
+
+canvas {
+    max-width: 80%;
+}
+
+.graphs{
+    width: 800px;
+    margin: auto;
+    margin-top: 100px;
+}
+
+/* PageAdmin */
+
+.links{
+    display: flex;
+    justify-content: flex-end;
+}
